@@ -21,7 +21,6 @@ export default function Board({xIsNext, squares, onPlay, indices}) {
     }
 
     const winner = calculateWinner(squares);
-    console.log(winner)
 
     let status;
     let draw;

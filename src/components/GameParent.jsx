@@ -1,5 +1,6 @@
 import Board from "./Board";
 import { useState } from "react";
+import calculateWinner from "../helper/calculateWinner";
 
 export default function GameParent() {
 
@@ -52,7 +53,8 @@ export default function GameParent() {
         </div>
 
         <div className="new-game">
-           <button onClick={onRestartGame}> Restart Game </button> 
+           { (currentMove === 9 || calculateWinner(currentSquares)) ?
+           <button onClick={onRestartGame}> Restart Game </button> : null}
         </div>
 
       </div>
