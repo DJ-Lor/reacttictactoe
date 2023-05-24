@@ -1,5 +1,5 @@
-import './App.css';
-import Square from './components/Board';
+import './App.css' 
+import GameParent from './components/GameParent';
 
 function App() {
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
 
-      <Square />
+      <GameParent />
 
     </div>
   );

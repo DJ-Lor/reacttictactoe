@@ -15,7 +15,7 @@ export default function calculateWinner(squares) {
 
     for (let i = 0 ; i < winningRows.length ; i++) {
         const [a,b,c] = winningRows[i];
-        if (squares[a] && squares[a] && squares[b] && squares[a] === squares[c]){
+        if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]){
             return squares[a]
         }
     }
