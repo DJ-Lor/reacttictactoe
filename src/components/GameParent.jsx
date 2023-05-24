@@ -33,14 +33,28 @@ export default function GameParent() {
         );
       });
 
+
+    function onRestartGame(){
+        setHistory([Array(9).fill(null)]);
+        setCurrentMove(0)
+    }
+
+
     return (
       <div className="game">
+
         <div className="game-board">
-          <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+          <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} indices={currentMove}/>
         </div>
+
         <div className="game-info">
           <ol>{moves}</ol>
         </div>
+
+        <div className="new-game">
+           <button onClick={onRestartGame}> Restart Game </button> 
+        </div>
+
       </div>
     );
   }

@@ -1,4 +1,3 @@
-import './App.css' 
 import GameParent from './components/GameParent';
 
 function App() {
